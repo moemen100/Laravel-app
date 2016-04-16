@@ -8,7 +8,7 @@ Welcome
 <div class="row">
     <div class="col-md-5" >
 <h3>Sign in </h3>
-        <form action ="#" method="post">
+        <form action ="{{route('signup')}}" method="post">
         <div class="form-group">
         <label for="email"> Your email </label>
         	<input class="form-control" type="email" name="email" id="email" >
@@ -18,6 +18,7 @@ Welcome
         	<input class="form-control" type="password" name="pass" id="pass" >
         	</div>
         	<button type="submit" class="btn btn-primary">Sign in</button>
+        	<input type="hidden" name="_token" value="{{session::token()}}"></input>
         	</form>
         </div>
     <div class="col-md-6">
